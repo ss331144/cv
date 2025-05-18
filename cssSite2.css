@@ -1,0 +1,155 @@
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+    url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExank0NWd4dHptNGN1dnY4d215YnoxOW8yNGZvdW9uNHU0OTlqMHl2YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/doXBzUFJRxpaUbuaqz/giphy.gif") no-repeat center center fixed;
+  background-size: cover;
+      animation: gradientBG 5s ease infinite;00
+      color: #2c3e50;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.85); /* לבן עם שקיפות של 85% */
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #2e86de;
+      margin-top: 40px;
+      border-bottom: 3px solid #2e86de;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #34495e;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      text-align: center;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #2e86de;
+    }
+
+    .contact-info a:hover {
+      color: #1abc9c;
+    }
+
+    .contact-info img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .profile-image {
+      display: block;
+      margin: 30px auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2e86de;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+.section p {
+  font-weight: 600;           /* קצת פחות כבד מ-bold אבל מודגש */
+  color: #222222;             /* שחור רך לקריאות טובה יותר */
+  font-size: 1.1rem;          /* קצת יותר גדול לקריאה נעימה */
+  line-height: 1.6;           /* מרווח שורות נוח */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* הצללה עדינה לטקסט */
+  padding: 4px 8px;           /* רווח פנימי קטן */
+  border-radius: 5px;         /* פינות מעוגלות */
+  box-shadow: 0 2px 5px rgba(255, 230, 0, 0.3); /* צל קל של רקע צהוב */
+  transition: all 0.3s ease;
+}
+
+.section p:hover {
+  background: linear-gradient(90deg   ); /* רקע כחול בהיר מתחלף */
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.section h2 {
+  font-weight: 600;           /* קצת פחות כבד מ-bold אבל מודגש */
+  color: #222222;             /* שחור רך לקריאות טובה יותר */
+  font-size: 1.1rem;          /* קצת יותר גדול לקריאה נעימה */
+  line-height: 1.6;           /* מרווח שורות נוח */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* הצללה עדינה לטקסט */
+  padding: 4px 8px;           /* רווח פנימי קטן */
+  border-radius: 5px;         /* פינות מעוגלות */
+  box-shadow: 0 2px 5px rgba(255, 230, 0, 0.3); /* צל קל של רקע צהוב */
+  transition: all 0.3s ease;
+}
+
+.section h2:hover {
+  color: #0057b7;             /* כחול בהיר בהופעה מעל */
+  background: linear-gradient(90deg, #a0c4ff, #11111); /* רקע כחול בהיר מתחלף */
+  box-shadow: 0 4px 10px rgba(100, 150, 255, 0.5);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+    .feedback-button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 14px 28px;
+      font-size: 1.1em;
+      background-color: #2e86de;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .feedback-button:hover {
+      background-color: #a3c1e1;
+      transform: scale(1.05);
+    }
+    .feedback-button:active {
+  background-color: green;
+  transform: scale(1.05);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
+
+      .profile-image {
+        width: 120px;
+        height: 120px;
+      }
+    }
