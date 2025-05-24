@@ -112,10 +112,27 @@
         </div>
     </div>
 
-    <button onclick="clearComments()">Clear All Comments</button>
+    <button id="clearCommentsBtn" onclick="clearComments()" style="display:none;">Clear All Comments</button>
+
+<button onclick="promptForAdmin()">Admin Login</button>
 
 </body>
 <script>
+  let isAdmin = false;
+
+  function promptForAdmin() {
+    let password = prompt("Enter admin password:");
+    if (password === "sahar_admin00") { // שנה כאן את הסיסמה שלך
+      isAdmin = true;
+      alert("Welcome, admin!");
+      document.getElementById('clearCommentsBtn').style.display = 'inline-block';
+      loadComments(); // עכשיו תוכל לראות תגובות ולנקות
+    } else {
+      alert("Wrong password!");
+    }
+  }
+
+    
     window.onload = function() {
       loadComments();
     };
