@@ -6,7 +6,7 @@
     linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
     url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExank0NWd4dHptNGN1dnY4d215YnoxOW8yNGZvdW9uNHU0OTlqMHl2YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/doXBzUFJRxpaUbuaqz/giphy.gif") no-repeat center center fixed;
   background-size: cover;
-      animation: gradientBG 5s ease infinite;00
+      animation: gradientBG 5s ease infinite;
       color: #2c3e50;
     }
 
