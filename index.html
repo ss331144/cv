@@ -97,21 +97,6 @@
             </section>
         <button class="feedback-button" onclick="incrementClickCount()">Contact Me</button>
 
-        <label for="commentNameInput"><b>Name:</b></label><br/>
-          <textarea id="commentNameInput" rows="2" cols="50" placeholder="Your name..."></textarea><br/>
-
-        <label for="commentInput"><b>Comment:</b></label><br/>
-            <textarea id="commentInput" rows="4" cols="50" placeholder="Write your comment here..."></textarea><br/>
-
-        <button onclick="addComment()">Submit Comment</button>
-
-        <div class="comments-section">
-            <h3>Comments</h3>
-            <div id="commentCounter"></div>
-            <div id="commentsList"></div>
-        </div>
-    </div>
-
     <button id="clearCommentsBtn" onclick="clearComments()" style="display:none;">Clear All Comments</button>
 
 <button onclick="promptForAdmin()">Admin Login</button>
@@ -140,65 +125,7 @@
   function incrementClickCount() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-
     
-    function loadComments() {
-      const commentsList = document.getElementById('commentsList');
-      const commentCounter = document.getElementById('commentCounter');
-      commentsList.innerHTML = '';
-
-      let comments = JSON.parse(localStorage.getItem('comments')) || [];
-
-      comments.forEach(c => {
-        const div = document.createElement('div');
-        div.className = 'comment';
-        div.innerHTML = `${c.id} ) <b>${c.name}</b>: ${c.comment}`;
-
-        commentsList.appendChild(div);
-      });
-
-    commentCounter.textContent = `Total comments: ${comments.length}`;
-        }
-
-
-
-    function addComment() {
-      const commentInput = document.getElementById('commentInput');
-      const commentNameInput = document.getElementById('commentNameInput');
-
-      let commentText = commentInput.value.trim();
-      let commentNameText = commentNameInput.value.trim();
-
-      if (!commentText) {
-        alert('Please write a comment before submitting');
-        return;
-      }
-      if (!commentNameText) {
-        alert('Please enter your name before submitting');
-        return;
-      }
-
-      let comments = JSON.parse(localStorage.getItem('comments')) || [];
-      comments.push({
-        id: comments.length + 1,
-        name: commentNameText,
-        comment: commentText
-      });
-
-      localStorage.setItem('comments', JSON.stringify(comments));
-
-      commentInput.value = '';
-      commentNameInput.value = '';
-
-      loadComments();
-    }
-
-    function clearComments() {
-      localStorage.removeItem('comments');
-      loadComments();
-    }
-
 </script>
 
 
